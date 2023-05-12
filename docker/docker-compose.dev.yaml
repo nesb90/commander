@@ -1,0 +1,3 @@
+services:
+  commander-container:
+    command: dev

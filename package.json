@@ -1,0 +1,21 @@
+{
+  "name": "commander",
+  "version": "1.0.0",
+  "description": "Admin system for restaurants",
+  "main": "app.js",
+  "author": "NESB Systems",
+  "license": "MIT",
+  "dependencies": {
+    "fastify": "^4.17.0"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0",
+    "nodemon": "^2.0.22"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "test",
+    "init:db": "node 'src/db/scripts/create-schema-db.js'"
+  }
+}

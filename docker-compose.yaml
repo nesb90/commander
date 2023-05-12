@@ -1,0 +1,16 @@
+services:
+  commander-container:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/commander
+    working_dir: /commander
+    ports:
+      - ${SERVER_PORT}:${SERVER_PORT}
+    entrypoint:
+      - yarn
+    command:
+      - start
+    env_file:
+      - .env
