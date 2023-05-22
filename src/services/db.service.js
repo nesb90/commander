@@ -8,7 +8,7 @@ class DBService {
 
     try {
       dbClient = await this.dbPool.getClient()
-      await dbClient.query(sql, params)
+      return await dbClient.query(sql, params)
     } catch (error) {
       console.error(`Something went wrong wile executing query '${sql}' with params '${params}'`, error)
       throw error
