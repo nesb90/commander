@@ -5,10 +5,10 @@ init-db:
 	docker-compose run --rm commander-container run init:db
 
 db-migrate:
-	docker-compose run --rm n-pos run db:migrate
+	docker-compose run --rm commander-container run db:migrate
 
 db-migrate-revert:
-	docker-compose run --rm n-pos run db:migrate:revert
+	docker-compose run --rm commander-container run db:migrate:revert
 
 build:
 	docker build .
